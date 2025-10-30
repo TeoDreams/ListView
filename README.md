@@ -4,7 +4,7 @@ Questo è un progetto didattico sviluppato per un corso iOS, focalizzato sull'ap
 
 È un'app semplice per la gestione di liste della spesa che implementa funzionalità di base come l'autenticazione degli utenti, la creazione di liste e la gestione di articoli, il tutto salvando i dati localmente in file JSON.
 
-![Listify screenshot](Screenshot/ListView-screenshot.png)  
+![Listify screenshot](Screenshot/Listify-screenshot.png)  
 
 ## Caratteristiche Principali
 
