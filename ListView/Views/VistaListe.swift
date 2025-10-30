@@ -25,7 +25,7 @@ struct VistaListe: View {
             if listeFiltrate.isEmpty {
                 VStack(spacing: 10) {
                     Image(systemName: "list.bullet.clipboard")
-                        .font(.system(size: 50))
+                        .font(.system(size: 60))
                         .foregroundColor(.secondary)
                     Text("Nessuna Lista")
                         .font(.title2)
@@ -33,8 +33,7 @@ struct VistaListe: View {
                     Text("Crea la tua prima lista della spesa premendo il tasto '+' in alto")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, 40)
+                        .padding(.horizontal, 20)
                 }
             } else {
                 List {
@@ -49,13 +48,13 @@ struct VistaListe: View {
                                     Text("\(lista.conteggioRimanenti)")
                                         .font(.caption)
                                         .fontWeight(.bold)
-                                        .padding(6)
+                                        .padding(8)
                                         .background(Color.accentColor.opacity(0.15))
                                         .foregroundColor(.accentColor)
                                         .clipShape(Circle())
                                 }
                             }
-                            .padding(.vertical, 4)
+                            .padding(.vertical, 5)
                         }
                     }
                     .onDelete { indici in
@@ -79,7 +78,7 @@ struct VistaListe: View {
             NavigationStack {
                 Form {
                     TextField("Nome della nuova lista", text: $nuovoTitoloLista)
-                        .padding(.vertical, 5)
+
                 }
                 .navigationTitle("Nuova Lista")
                 .toolbar {
