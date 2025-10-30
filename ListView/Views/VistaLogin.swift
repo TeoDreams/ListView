@@ -16,22 +16,28 @@ struct VistaLogin: View {
 
                 VStack {
                     Image(systemName: "list.bullet.clipboard.fill")
-
+                        .font(.system(size: 60))
+                        .foregroundColor(.accentColor)
+                        .padding(.bottom, 5)
 
                     Text("Listify")
-
+                        .font(.system(size: 40, weight: .bold, design: .rounded))
+                        .foregroundColor(.accentColor)
                 }
-
+                .padding(.top, 40)
+                .padding(.bottom, 30)
 
                 VStack(spacing: 15) {
                     Text("Accedi al tuo account")
-
+                        .font(.headline)
+                        .foregroundColor(.secondary)
 
                     HStack {
                         Image(systemName: "person.fill")
-
+                            .foregroundColor(.gray)
                         TextField("Nome utente", text: $nomeUtente)
-
+                            .autocapitalization(.none)
+                            .keyboardType(.emailAddress)
                     }
                     .padding(12)
                     .background(Color(.systemGray6))
@@ -39,9 +45,12 @@ struct VistaLogin: View {
 
                     HStack {
                         Image(systemName: "lock.fill")
+                            .foregroundColor(.gray)
                         SecureField("Password", text: $password)
                     }
-
+                    .padding(12)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(8)
                 }
                 .padding(.horizontal)
 
@@ -54,7 +63,12 @@ struct VistaLogin: View {
                         }
                     }) {
                         Text("Accedi")
-
+                            .fontWeight(.semibold)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.accentColor)
+                            .cornerRadius(10)
                     }
                     .disabled(nomeUtente.isEmpty || password.isEmpty)
 
