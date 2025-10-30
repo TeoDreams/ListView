@@ -35,9 +35,9 @@ class GestoreDati {
         salvaTutteLeListe(daTutteLeListe)
     }
 
-    private func percorsoFile(_ nomeFile: String) -> URL {
-        let percorsi = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return percorsi[0].appendingPathComponent(nomeFile)
+    private func percorsoFile( nomeFile: String) -> URL {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return path[0].appendingPathComponent(nomeFile)
     }
 
     func salvaTutteLeListe(_ tutteLeListe: [ListaSpesa]) {
